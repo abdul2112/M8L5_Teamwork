@@ -84,4 +84,19 @@ accommodationsRoute.get("/destinations/:city", async (req, res) => {
 	}
 });
 
+accommodationsRoute.get("/destinations", async (req, res) => {
+	try {
+		const details = await AccModel.find();
+		const target = await details.filter((acc: Acc) => acc.city);
+		if (target) {
+			res.status(200).send(target);
+		} else {
+			res.status(404).send("Not found!");
+		}
+	} catch (error) {
+		console.log({error: error});
+		res.status(404).send("Not found!");
+	}
+});
+
 export default accommodationsRoute;

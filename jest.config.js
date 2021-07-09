@@ -3,15 +3,15 @@ module.exports = {
     testEnvironment: 'node',
 };
 
-const config = {
-    verbose: true,
-};
+// const config = {
+//     verbose: true,
+// };
 
-module.exports = config;
+// module.exports = config;
 
-// Or async function
-module.exports = async () => {
-    return {
-        verbose: true,
-    };
-};
+// // Or async function
+// module.exports = async () => {
+//     return {
+//         verbose: true,
+//     };
+// };
